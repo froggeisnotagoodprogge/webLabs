@@ -9,6 +9,7 @@
         <!-- <script src="scripts/snow_script.js"></script> -->
         <script src="scripts/loadtime_script.js"></script>
         <script src="scripts/menu_script.js"></script>
+        <script src="scripts/price_calculation_script.js"></script>
     </head>
     <body>
         <header>
@@ -18,22 +19,30 @@
                     <li><a class="menu-item" href="index.html">Главная</a></li>
                     <li><a class="menu-item" href="CalculationPage.html">Рассчитать стоимость</a></li>
                     <li><a class="menu-item" href="ContactsPage.html">Контактная информация</a></li>
-                    <script src="scripts/menu_script.js"></script>
-                </ul>
             </nav>
         </header>
 
         <main>
-            <section id="comp_price">
-                <h3>Рассчитать примерную стоимость</h3>
-                <p>
-                    <ol>
-                        <li>Вводим данные проекта</li>
-                        <li><code>some code to compute price</code></li>
-                        <li>Выводим примерную цену</li>
-                    </ol>
-                </p>
-            </section>   
+            <form id="costCalculator">
+                <label for="area">Площадь территории:</label>
+                <input type="number" id="area" name="area" required>
+            
+                <label for="houseArea">Площадь дома:</label>
+                <input type="number" id="houseArea" name="houseArea" required>
+            
+                <button type="submit">Рассчитать стоимость</button>
+            </form>
+            
+            <table id="resultTable">
+                <thead>
+                <tr>
+                    <th>Площадь территории</th>
+                    <th>Площадь дома</th>
+                    <th>Стоимость работ</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
         </main>
         <aside><em>made by frogge for weblabs</em></aside>
         <footer>

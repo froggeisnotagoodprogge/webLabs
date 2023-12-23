@@ -48,7 +48,7 @@ nav ul li a {
     color: white;
 }
 
-.menu-item:active {
+.menu-item.active {
     color: gray;
 }
 
@@ -102,6 +102,30 @@ section#projects article {
     margin-bottom: 20px;
 }
 
+.table-wrapper {
+    display: grid;
+    overflow: auto;
+  }
+  
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+  }
+.row:nth-child(odd) {
+    background-color: #f5f5f5; /* Стиль для нечётных строк */
+  }
+  
+.row:nth-child(even) {
+    background-color: #fff; /* Стиль для чётных строк */
+}
+  
+  .header {
+    font-weight: bold;
+    background-color: #e0e0e0; /* Цвет фона для заголовка */
+  }
+  
+
 footer {
     background-color: darkblue;
     color: white;
@@ -133,7 +157,6 @@ footer blockquote {
     text-align: right;
 }
 
-/* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
     section#projects article {
         width: calc(33.33% - 10px); /* 3 columns with spacing */

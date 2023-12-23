@@ -2,6 +2,7 @@
 function highlightActiveMenuItem() {
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => {
+        console.log('location ', window.location.pathname, 'item ', item)
         if (window.location.pathname.includes(item.getAttribute('href'))) {
             item.classList.add('active');
             console.log('Active class added to:', item);

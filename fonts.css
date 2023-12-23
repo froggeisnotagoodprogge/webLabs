@@ -157,15 +157,13 @@ footer blockquote {
     text-align: right;
 }
 
-@media screen and (max-width: 1200px) {
-    section#projects article {
-        width: calc(33.33% - 10px); /* 3 columns with spacing */
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     section#projects article {
         width: 100%;
+    }
+
+    footer{
+        display: none;
     }
 
     header {
